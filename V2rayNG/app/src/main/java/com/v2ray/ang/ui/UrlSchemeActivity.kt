@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.lifecycleScope
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.extension.toast
 import com.v2ray.ang.extension.toastError
 import com.v2ray.ang.handler.AngConfigManager

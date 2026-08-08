@@ -55,7 +55,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.v2ray.ang.util.AppIconFetcher
 import androidx.compose.ui.unit.sp
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import sh.calvin.reorderable.ReorderableCollectionItemScope
 
 @OptIn(ExperimentalMaterial3Api::class)

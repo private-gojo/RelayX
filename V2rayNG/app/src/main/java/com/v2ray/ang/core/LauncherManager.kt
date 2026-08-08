@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.content.ContextCompat
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.extension.isComplexType
 import com.v2ray.ang.extension.toast
 import com.v2ray.ang.extension.toastError

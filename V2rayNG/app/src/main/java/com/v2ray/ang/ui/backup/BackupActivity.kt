@@ -30,8 +30,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.BuildConfig
-import com.v2ray.ang.R
+import dev.relayx.core.BuildConfig
+import dev.relayx.core.R
 import com.v2ray.ang.dto.entities.WebDavConfig
 import com.v2ray.ang.extension.toastError
 import com.v2ray.ang.extension.toastSuccess

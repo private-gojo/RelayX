@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
 import com.v2ray.ang.AppConfig.BUILTIN_OUTBOUND_TAGS
 import com.v2ray.ang.AppConfig.TAG_PROXY
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.dto.entities.RulesetItem
 import com.v2ray.ang.extension.nullIfBlank
 import com.v2ray.ang.extension.toast

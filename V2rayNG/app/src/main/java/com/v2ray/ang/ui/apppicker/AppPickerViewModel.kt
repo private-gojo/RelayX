@@ -3,7 +3,7 @@ package com.v2ray.ang.ui.apppicker
 import android.app.Application
 import android.content.Context
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.dto.AppInfo
 import com.v2ray.ang.ui.AppSelection
 import com.v2ray.ang.ui.base.BaseViewModel

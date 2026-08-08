@@ -7,7 +7,7 @@ import android.app.Service
 import android.content.Context
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.enums.NotificationChannelType
 
 /**

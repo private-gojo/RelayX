@@ -3,7 +3,7 @@ package com.v2ray.ang.ui.main
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.dto.entities.ProfileItem
 import com.v2ray.ang.enums.EConfigType
 import com.v2ray.ang.extension.isComplexType

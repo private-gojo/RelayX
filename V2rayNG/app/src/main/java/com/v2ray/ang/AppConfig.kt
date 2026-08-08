@@ -1,4 +1,5 @@
 package com.v2ray.ang
+import dev.relayx.core.BuildConfig
 
 
 object AppConfig {

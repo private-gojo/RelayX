@@ -14,7 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import com.v2ray.ang.AppConfig
 import com.v2ray.ang.AppConfig.LOOPBACK
-import com.v2ray.ang.BuildConfig
+import dev.relayx.core.BuildConfig
 import java.io.IOException
 import java.net.InetAddress
 import java.net.ServerSocket

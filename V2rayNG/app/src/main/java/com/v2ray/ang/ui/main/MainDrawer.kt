@@ -28,7 +28,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.ui.compose.AppDivider
 import com.v2ray.ang.ui.compose.verticalScrollbar
 

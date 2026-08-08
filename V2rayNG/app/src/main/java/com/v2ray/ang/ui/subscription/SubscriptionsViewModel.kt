@@ -2,7 +2,7 @@ package com.v2ray.ang.ui.subscription
 
 import android.app.Application
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.dto.SubscriptionUpdateMessage
 import com.v2ray.ang.dto.entities.SubscriptionCache
 import com.v2ray.ang.dto.entities.SubscriptionItem

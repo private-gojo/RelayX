@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.enums.PermissionType
 import com.v2ray.ang.extension.toast
 

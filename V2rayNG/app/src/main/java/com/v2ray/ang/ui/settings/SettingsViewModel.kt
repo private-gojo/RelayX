@@ -2,7 +2,7 @@ package com.v2ray.ang.ui.settings
 
 import android.app.Application
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.root.RootManager
 import com.v2ray.ang.ui.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers

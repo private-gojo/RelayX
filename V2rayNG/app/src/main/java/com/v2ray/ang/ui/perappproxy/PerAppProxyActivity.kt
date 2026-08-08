@@ -39,7 +39,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.dto.AppInfo
 import com.v2ray.ang.extension.toastInfo
 import com.v2ray.ang.extension.toastSuccess

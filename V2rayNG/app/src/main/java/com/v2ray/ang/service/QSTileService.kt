@@ -9,7 +9,7 @@ import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import androidx.core.content.ContextCompat
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.core.CoreServiceManager
 import com.v2ray.ang.core.LauncherManager
 import com.v2ray.ang.helper.MessageHelper

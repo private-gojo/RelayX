@@ -4,7 +4,7 @@ import android.Manifest
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
-import com.v2ray.ang.R
+import dev.relayx.core.R
 
 /**
  * Permission types used in the app, handling API level differences.

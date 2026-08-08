@@ -28,7 +28,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import com.v2ray.ang.R
+import dev.relayx.core.R
 
 @Composable
 fun PreferenceGroupHeader(title: String, modifier: Modifier = Modifier) {

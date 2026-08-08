@@ -2,7 +2,7 @@ package com.v2ray.ang.ui.main
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.ui.compose.DeleteConfirmDialog
 
 @Composable

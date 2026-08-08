@@ -25,7 +25,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.v2ray.ang.AppConfig.BUILTIN_OUTBOUND_TAGS
 import com.v2ray.ang.AppConfig.TAG_PROXY
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.dto.entities.ProfileItem
 import com.v2ray.ang.enums.BalancerStrategyType
 import com.v2ray.ang.enums.EConfigType

@@ -8,7 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.core.CoreServiceManager
 import com.v2ray.ang.core.LauncherManager
 

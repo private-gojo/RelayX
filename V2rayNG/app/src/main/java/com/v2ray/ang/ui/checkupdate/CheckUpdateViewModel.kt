@@ -2,7 +2,7 @@ package com.v2ray.ang.ui.checkupdate
 
 import android.app.Application
 import com.v2ray.ang.AppConfig
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.dto.CheckUpdateResult
 import com.v2ray.ang.handler.MmkvManager
 import com.v2ray.ang.handler.UpdateCheckerManager

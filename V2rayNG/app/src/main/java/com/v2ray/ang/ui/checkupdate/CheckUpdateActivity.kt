@@ -20,8 +20,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.v2ray.ang.BuildConfig
-import com.v2ray.ang.R
+import dev.relayx.core.BuildConfig
+import dev.relayx.core.R
 import com.v2ray.ang.core.CoreNativeManager
 import com.v2ray.ang.ui.base.BaseComponentActivity
 import com.v2ray.ang.ui.compose.AppTopBar

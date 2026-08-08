@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import com.v2ray.ang.R
+import dev.relayx.core.R
 import com.v2ray.ang.extension.toastError
 import com.v2ray.ang.extension.toastSuccess
 import com.v2ray.ang.handler.AngConfigManager
