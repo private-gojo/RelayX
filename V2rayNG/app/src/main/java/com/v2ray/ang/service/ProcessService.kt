@@ -1,8 +1,14 @@
-package com.v2ray.ang.service
+package dev.relayx.core.service
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.Context
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.util.LogUtil
+import dev.relayx.core.AppConfig
+import dev.relayx.core.util.LogUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

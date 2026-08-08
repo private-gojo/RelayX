@@ -1,16 +1,22 @@
-package com.v2ray.ang.ui.server
+package dev.relayx.core.ui.server
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.res.stringResource
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import dev.relayx.core.R
-import com.v2ray.ang.dto.entities.ProfileItem
-import com.v2ray.ang.enums.EConfigType
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.ui.compose.FormTextField
-import com.v2ray.ang.ui.compose.SettingsSwitchItem
+import dev.relayx.core.dto.entities.ProfileItem
+import dev.relayx.core.enums.EConfigType
+import dev.relayx.core.extension.toast
+import dev.relayx.core.ui.compose.FormTextField
+import dev.relayx.core.ui.compose.SettingsSwitchItem
 
 class ServerHysteria2Activity : BaseServerActivity() {
 

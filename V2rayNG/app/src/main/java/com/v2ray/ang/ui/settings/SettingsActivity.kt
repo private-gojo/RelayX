@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.settings
+package dev.relayx.core.ui.settings
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -22,23 +28,23 @@ import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.VPN
+import dev.relayx.core.AppConfig
+import dev.relayx.core.AppConfig.VPN
 import dev.relayx.core.R
-import com.v2ray.ang.handler.MmkvManager.rememberMmkvBool
-import com.v2ray.ang.handler.MmkvManager.rememberMmkvString
-import com.v2ray.ang.handler.SettingsChangeManager
-import com.v2ray.ang.root.RootManager
-import com.v2ray.ang.ui.base.BaseComponentActivity
-import com.v2ray.ang.ui.compose.AppTopBar
-import com.v2ray.ang.ui.compose.CollapsiblePreferenceGroupHeader
-import com.v2ray.ang.ui.compose.SettingsEditItem
-import com.v2ray.ang.ui.compose.SettingsListItem
-import com.v2ray.ang.ui.compose.SettingsMenuItem
-import com.v2ray.ang.ui.compose.SettingsSwitchItem
-import com.v2ray.ang.ui.compose.ThemeManager
-import com.v2ray.ang.ui.compose.verticalScrollbar
-import com.v2ray.ang.util.Utils
+import dev.relayx.core.handler.MmkvManager.rememberMmkvBool
+import dev.relayx.core.handler.MmkvManager.rememberMmkvString
+import dev.relayx.core.handler.SettingsChangeManager
+import dev.relayx.core.root.RootManager
+import dev.relayx.core.ui.base.BaseComponentActivity
+import dev.relayx.core.ui.compose.AppTopBar
+import dev.relayx.core.ui.compose.CollapsiblePreferenceGroupHeader
+import dev.relayx.core.ui.compose.SettingsEditItem
+import dev.relayx.core.ui.compose.SettingsListItem
+import dev.relayx.core.ui.compose.SettingsMenuItem
+import dev.relayx.core.ui.compose.SettingsSwitchItem
+import dev.relayx.core.ui.compose.ThemeManager
+import dev.relayx.core.ui.compose.verticalScrollbar
+import dev.relayx.core.util.Utils
 
 class SettingsActivity : BaseComponentActivity() {
 

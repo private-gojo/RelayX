@@ -1,8 +1,14 @@
-package com.v2ray.ang.root
+package dev.relayx.core.root
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.Context
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.util.LogUtil
+import dev.relayx.core.AppConfig
+import dev.relayx.core.util.LogUtil
 import java.io.File
 import java.util.concurrent.TimeUnit
 

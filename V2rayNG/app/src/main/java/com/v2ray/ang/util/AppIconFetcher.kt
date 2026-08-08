@@ -1,4 +1,10 @@
-package com.v2ray.ang.util
+package dev.relayx.core.util
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.Context
 import coil.ImageLoader
@@ -7,7 +13,7 @@ import coil.fetch.DrawableResult
 import coil.fetch.FetchResult
 import coil.fetch.Fetcher
 import coil.request.Options
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 
 class AppIconFetcher(
     private val packageName: String,

@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.compose
+package dev.relayx.core.ui.compose
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -17,8 +23,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.handler.MmkvManager
+import dev.relayx.core.AppConfig
+import dev.relayx.core.handler.MmkvManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -1,10 +1,16 @@
-package com.v2ray.ang.ui.settings
+package dev.relayx.core.ui.settings
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.app.Application
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import dev.relayx.core.R
-import com.v2ray.ang.root.RootManager
-import com.v2ray.ang.ui.base.BaseViewModel
+import dev.relayx.core.root.RootManager
+import dev.relayx.core.ui.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

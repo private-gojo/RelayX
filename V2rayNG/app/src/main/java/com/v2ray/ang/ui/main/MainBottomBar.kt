@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.main
+package dev.relayx.core.ui.main
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -27,10 +33,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import dev.relayx.core.R
-import com.v2ray.ang.ui.compose.AppDivider
-import com.v2ray.ang.ui.compose.colorFabActive
-import com.v2ray.ang.ui.compose.colorFabInactiveDark
-import com.v2ray.ang.ui.compose.colorFabInactiveLight
+import dev.relayx.core.ui.compose.AppDivider
+import dev.relayx.core.ui.compose.colorFabActive
+import dev.relayx.core.ui.compose.colorFabInactiveDark
+import dev.relayx.core.ui.compose.colorFabInactiveLight
 
 @Composable
 fun MainBottomBar(

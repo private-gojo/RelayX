@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.shortcut
+package dev.relayx.core.ui.shortcut
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.Intent
 import android.os.Bundle
@@ -29,14 +35,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import dev.relayx.core.R
-import com.v2ray.ang.handler.MmkvManager
-import com.v2ray.ang.ui.base.BaseComponentActivity
-import com.v2ray.ang.ui.compose.AppTopBar
-import com.v2ray.ang.ui.compose.SettingsSwitchItem
-import com.v2ray.ang.ui.compose.verticalScrollbar
-import com.v2ray.ang.util.LogUtil
+import dev.relayx.core.handler.MmkvManager
+import dev.relayx.core.ui.base.BaseComponentActivity
+import dev.relayx.core.ui.compose.AppTopBar
+import dev.relayx.core.ui.compose.SettingsSwitchItem
+import dev.relayx.core.ui.compose.verticalScrollbar
+import dev.relayx.core.util.LogUtil
 
 class TaskerActivity : BaseComponentActivity() {
 

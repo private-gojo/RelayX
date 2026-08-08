@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui
+package dev.relayx.core.ui
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 /**
  * Pure selection operations shared by application-list screens.

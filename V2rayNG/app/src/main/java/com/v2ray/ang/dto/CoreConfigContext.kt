@@ -1,8 +1,14 @@
-package com.v2ray.ang.dto
+package dev.relayx.core.dto
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.Context
-import com.v2ray.ang.dto.entities.ProfileItem
-import com.v2ray.ang.enums.CoreResolvedType
+import dev.relayx.core.dto.entities.ProfileItem
+import dev.relayx.core.enums.CoreResolvedType
 
 data class CoreConfigContext(
     val context: Context,

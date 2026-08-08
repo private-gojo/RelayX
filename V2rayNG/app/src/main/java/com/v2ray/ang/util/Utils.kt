@@ -1,4 +1,10 @@
-package com.v2ray.ang.util
+package dev.relayx.core.util
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -12,8 +18,8 @@ import android.util.Patterns
 import android.webkit.URLUtil
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.AppConfig.LOOPBACK
+import dev.relayx.core.AppConfig
+import dev.relayx.core.AppConfig.LOOPBACK
 import dev.relayx.core.BuildConfig
 import java.io.IOException
 import java.net.InetAddress

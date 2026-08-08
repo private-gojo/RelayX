@@ -1,18 +1,24 @@
-package com.v2ray.ang.ui.server
+package dev.relayx.core.ui.server
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.setValue
-import com.v2ray.ang.AppConfig.DEFAULT_PORT
-import com.v2ray.ang.AppConfig.REALITY
-import com.v2ray.ang.AppConfig.WIREGUARD_LOCAL_ADDRESS_V4
-import com.v2ray.ang.AppConfig.WIREGUARD_LOCAL_MTU
-import com.v2ray.ang.dto.entities.ProfileItem
-import com.v2ray.ang.enums.EConfigType
-import com.v2ray.ang.enums.NetworkType
-import com.v2ray.ang.extension.nullIfBlank
-import com.v2ray.ang.util.JsonUtil
+import dev.relayx.core.AppConfig.DEFAULT_PORT
+import dev.relayx.core.AppConfig.REALITY
+import dev.relayx.core.AppConfig.WIREGUARD_LOCAL_ADDRESS_V4
+import dev.relayx.core.AppConfig.WIREGUARD_LOCAL_MTU
+import dev.relayx.core.dto.entities.ProfileItem
+import dev.relayx.core.enums.EConfigType
+import dev.relayx.core.enums.NetworkType
+import dev.relayx.core.extension.nullIfBlank
+import dev.relayx.core.util.JsonUtil
 
 class ServerUiState(
     configType: EConfigType,

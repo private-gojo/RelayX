@@ -1,9 +1,15 @@
-package com.v2ray.ang.fmt
+package dev.relayx.core.fmt
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
-import com.v2ray.ang.dto.entities.ProfileItem
-import com.v2ray.ang.enums.EConfigType
-import com.v2ray.ang.extension.idnHost
-import com.v2ray.ang.util.Utils
+import dev.relayx.core.dto.entities.ProfileItem
+import dev.relayx.core.enums.EConfigType
+import dev.relayx.core.extension.idnHost
+import dev.relayx.core.util.Utils
 import java.net.URI
 
 object VlessFmt : FmtBase() {

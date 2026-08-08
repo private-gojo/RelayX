@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.main
+package dev.relayx.core.ui.main
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,9 +22,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.v2ray.ang.dto.GroupMapItem
-import com.v2ray.ang.dto.entities.ServersCache
-import com.v2ray.ang.ui.compose.colorFabActive
+import dev.relayx.core.dto.GroupMapItem
+import dev.relayx.core.dto.entities.ServersCache
+import dev.relayx.core.ui.compose.colorFabActive
 import kotlinx.coroutines.flow.StateFlow
 
 @Composable

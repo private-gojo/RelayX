@@ -1,15 +1,21 @@
-package com.v2ray.ang.ui.shortcut
+package dev.relayx.core.ui.shortcut
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import dev.relayx.core.R
-import com.v2ray.ang.extension.toastError
-import com.v2ray.ang.extension.toastSuccess
-import com.v2ray.ang.handler.AngConfigManager
-import com.v2ray.ang.ui.base.HelperBaseComponentActivity
-import com.v2ray.ang.ui.main.MainActivity
+import dev.relayx.core.extension.toastError
+import dev.relayx.core.extension.toastSuccess
+import dev.relayx.core.handler.AngConfigManager
+import dev.relayx.core.ui.base.HelperBaseComponentActivity
+import dev.relayx.core.ui.main.MainActivity
 
 class ScScannerActivity : HelperBaseComponentActivity() {
 

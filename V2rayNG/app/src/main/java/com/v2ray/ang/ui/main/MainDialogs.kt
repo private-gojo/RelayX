@@ -1,9 +1,15 @@
-package com.v2ray.ang.ui.main
+package dev.relayx.core.ui.main
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import dev.relayx.core.R
-import com.v2ray.ang.ui.compose.DeleteConfirmDialog
+import dev.relayx.core.ui.compose.DeleteConfirmDialog
 
 @Composable
 fun MainDialogs(

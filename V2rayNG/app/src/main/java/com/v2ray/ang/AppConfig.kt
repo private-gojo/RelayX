@@ -1,4 +1,4 @@
-package com.v2ray.ang
+package dev.relayx.core
 import dev.relayx.core.BuildConfig
 
 

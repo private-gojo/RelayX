@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.checkupdate
+package dev.relayx.core.ui.checkupdate
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -22,13 +28,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.relayx.core.BuildConfig
 import dev.relayx.core.R
-import com.v2ray.ang.core.CoreNativeManager
-import com.v2ray.ang.ui.base.BaseComponentActivity
-import com.v2ray.ang.ui.compose.AppTopBar
-import com.v2ray.ang.ui.compose.SettingsMenuItem
-import com.v2ray.ang.ui.compose.SettingsSwitchItem
-import com.v2ray.ang.ui.compose.VersionInfoBlock
-import com.v2ray.ang.util.Utils
+import dev.relayx.core.core.CoreNativeManager
+import dev.relayx.core.ui.base.BaseComponentActivity
+import dev.relayx.core.ui.compose.AppTopBar
+import dev.relayx.core.ui.compose.SettingsMenuItem
+import dev.relayx.core.ui.compose.SettingsSwitchItem
+import dev.relayx.core.ui.compose.VersionInfoBlock
+import dev.relayx.core.util.Utils
 
 class CheckUpdateActivity : BaseComponentActivity() {
 

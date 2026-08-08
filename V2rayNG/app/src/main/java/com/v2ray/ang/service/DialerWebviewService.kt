@@ -1,4 +1,10 @@
-package com.v2ray.ang.service
+package dev.relayx.core.service
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,7 +13,7 @@ import android.os.Looper
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.v2ray.ang.contracts.IDialerService
+import dev.relayx.core.contracts.IDialerService
 
 class DialerWebviewService : IDialerService {
     private var webView: WebView? = null

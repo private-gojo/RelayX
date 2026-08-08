@@ -1,4 +1,10 @@
-package com.v2ray.ang.service
+package dev.relayx.core.service
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -8,13 +14,13 @@ import android.graphics.drawable.Icon
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import androidx.core.content.ContextCompat
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import dev.relayx.core.R
-import com.v2ray.ang.core.CoreServiceManager
-import com.v2ray.ang.core.LauncherManager
-import com.v2ray.ang.helper.MessageHelper
-import com.v2ray.ang.util.LogUtil
-import com.v2ray.ang.util.Utils
+import dev.relayx.core.core.CoreServiceManager
+import dev.relayx.core.core.LauncherManager
+import dev.relayx.core.helper.MessageHelper
+import dev.relayx.core.util.LogUtil
+import dev.relayx.core.util.Utils
 import java.lang.ref.SoftReference
 
 class QSTileService : TileService() {

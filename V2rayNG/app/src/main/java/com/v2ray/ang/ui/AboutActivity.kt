@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui
+package dev.relayx.core.ui
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.os.Bundle
 import android.webkit.WebView
@@ -26,15 +32,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import dev.relayx.core.BuildConfig
 import dev.relayx.core.R
-import com.v2ray.ang.core.CoreNativeManager
-import com.v2ray.ang.ui.base.BaseComponentActivity
-import com.v2ray.ang.ui.compose.AppTopBar
-import com.v2ray.ang.ui.compose.SettingsMenuItem
-import com.v2ray.ang.ui.compose.VersionInfoBlock
-import com.v2ray.ang.util.Utils
+import dev.relayx.core.core.CoreNativeManager
+import dev.relayx.core.ui.base.BaseComponentActivity
+import dev.relayx.core.ui.compose.AppTopBar
+import dev.relayx.core.ui.compose.SettingsMenuItem
+import dev.relayx.core.ui.compose.VersionInfoBlock
+import dev.relayx.core.util.Utils
 
 class AboutActivity : BaseComponentActivity() {
 

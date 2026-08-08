@@ -1,16 +1,22 @@
-package com.v2ray.ang.helper
+package dev.relayx.core.helper
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.content.ContextCompat
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.dto.SubscriptionUpdateMessage
-import com.v2ray.ang.dto.TestServiceMessage
-import com.v2ray.ang.service.CoreTestService
-import com.v2ray.ang.service.SubscriptionUpdateService
-import com.v2ray.ang.util.LogUtil
+import dev.relayx.core.AppConfig
+import dev.relayx.core.dto.SubscriptionUpdateMessage
+import dev.relayx.core.dto.TestServiceMessage
+import dev.relayx.core.service.CoreTestService
+import dev.relayx.core.service.SubscriptionUpdateService
+import dev.relayx.core.util.LogUtil
 import java.io.Serializable
 
 object MessageHelper {

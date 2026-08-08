@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.compose
+package dev.relayx.core.ui.compose
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.graphics.drawable.Drawable
 import androidx.compose.animation.AnimatedVisibility
@@ -53,7 +59,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.v2ray.ang.util.AppIconFetcher
+import dev.relayx.core.util.AppIconFetcher
 import androidx.compose.ui.unit.sp
 import dev.relayx.core.R
 import sh.calvin.reorderable.ReorderableCollectionItemScope

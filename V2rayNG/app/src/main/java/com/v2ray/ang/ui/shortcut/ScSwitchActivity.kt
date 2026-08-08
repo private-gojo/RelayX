@@ -1,11 +1,17 @@
-package com.v2ray.ang.ui.shortcut
+package dev.relayx.core.ui.shortcut
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.os.Bundle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import com.v2ray.ang.core.CoreServiceManager
-import com.v2ray.ang.core.LauncherManager
-import com.v2ray.ang.ui.base.BaseComponentActivity
+import dev.relayx.core.core.CoreServiceManager
+import dev.relayx.core.core.LauncherManager
+import dev.relayx.core.ui.base.BaseComponentActivity
 
 class ScSwitchActivity : BaseComponentActivity() {
 

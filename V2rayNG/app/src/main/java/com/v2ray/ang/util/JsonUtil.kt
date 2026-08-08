@@ -1,4 +1,10 @@
-package com.v2ray.ang.util
+package dev.relayx.core.util
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -8,7 +14,7 @@ import com.google.gson.JsonPrimitive
 import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
 import com.google.gson.reflect.TypeToken
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import java.lang.reflect.Type
 
 object JsonUtil {

@@ -1,11 +1,17 @@
-package com.v2ray.ang.ui.routing
+package dev.relayx.core.ui.routing
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.app.Application
-import com.v2ray.ang.dto.entities.RulesetItem
-import com.v2ray.ang.extension.moveItem
-import com.v2ray.ang.handler.MmkvManager
-import com.v2ray.ang.handler.SettingsManager
-import com.v2ray.ang.ui.base.BaseViewModel
+import dev.relayx.core.dto.entities.RulesetItem
+import dev.relayx.core.extension.moveItem
+import dev.relayx.core.handler.MmkvManager
+import dev.relayx.core.handler.SettingsManager
+import dev.relayx.core.ui.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.main
+package dev.relayx.core.ui.main
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
@@ -24,8 +30,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import dev.relayx.core.R
-import com.v2ray.ang.ui.compose.AppTopBar
-import com.v2ray.ang.ui.compose.verticalScrollbar
+import dev.relayx.core.ui.compose.AppTopBar
+import dev.relayx.core.ui.compose.verticalScrollbar
 
 @Composable
 fun MainTopBar(

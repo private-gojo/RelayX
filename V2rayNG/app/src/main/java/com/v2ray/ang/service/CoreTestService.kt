@@ -1,22 +1,28 @@
-package com.v2ray.ang.service
+package dev.relayx.core.service
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import dev.relayx.core.R
-import com.v2ray.ang.core.CoreNativeManager
-import com.v2ray.ang.dto.RealPingEvent
-import com.v2ray.ang.dto.TestServiceMessage
-import com.v2ray.ang.enums.NotificationChannelType
-import com.v2ray.ang.extension.serializable
-import com.v2ray.ang.handler.AngConfigManager
-import com.v2ray.ang.handler.MmkvManager
-import com.v2ray.ang.helper.MessageHelper
-import com.v2ray.ang.helper.NotificationHelper
-import com.v2ray.ang.util.LogUtil
+import dev.relayx.core.core.CoreNativeManager
+import dev.relayx.core.dto.RealPingEvent
+import dev.relayx.core.dto.TestServiceMessage
+import dev.relayx.core.enums.NotificationChannelType
+import dev.relayx.core.extension.serializable
+import dev.relayx.core.handler.AngConfigManager
+import dev.relayx.core.handler.MmkvManager
+import dev.relayx.core.helper.MessageHelper
+import dev.relayx.core.helper.NotificationHelper
+import dev.relayx.core.util.LogUtil
 import java.util.Collections
 
 class CoreTestService : Service() {

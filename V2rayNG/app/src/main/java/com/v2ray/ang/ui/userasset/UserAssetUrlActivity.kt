@@ -1,4 +1,10 @@
-package com.v2ray.ang.ui.userasset
+package dev.relayx.core.ui.userasset
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -18,18 +24,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.v2ray.ang.AppConfig
+import dev.relayx.core.AppConfig
 import dev.relayx.core.R
-import com.v2ray.ang.dto.entities.AssetUrlItem
-import com.v2ray.ang.extension.toast
-import com.v2ray.ang.extension.toastSuccess
-import com.v2ray.ang.handler.MmkvManager
-import com.v2ray.ang.ui.base.BaseComponentActivity
-import com.v2ray.ang.ui.compose.AppTopBar
-import com.v2ray.ang.ui.compose.DeleteConfirmDialog
-import com.v2ray.ang.ui.compose.FormTextField
-import com.v2ray.ang.util.LogUtil
-import com.v2ray.ang.util.Utils
+import dev.relayx.core.dto.entities.AssetUrlItem
+import dev.relayx.core.extension.toast
+import dev.relayx.core.extension.toastSuccess
+import dev.relayx.core.handler.MmkvManager
+import dev.relayx.core.ui.base.BaseComponentActivity
+import dev.relayx.core.ui.compose.AppTopBar
+import dev.relayx.core.ui.compose.DeleteConfirmDialog
+import dev.relayx.core.ui.compose.FormTextField
+import dev.relayx.core.util.LogUtil
+import dev.relayx.core.util.Utils
 import java.io.File
 
 class UserAssetUrlActivity : BaseComponentActivity() {

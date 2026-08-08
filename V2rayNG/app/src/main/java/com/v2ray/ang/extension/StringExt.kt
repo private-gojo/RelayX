@@ -1,4 +1,10 @@
-package com.v2ray.ang.extension
+package dev.relayx.core.extension
+import dev.relayx.core.*
+import dev.relayx.core.dto.*
+import dev.relayx.core.handler.*
+import dev.relayx.core.enums.*
+import dev.relayx.core.util.*
+import dev.relayx.core.dto.entities.*
 
 /**
  * Removes all whitespace from the string.
