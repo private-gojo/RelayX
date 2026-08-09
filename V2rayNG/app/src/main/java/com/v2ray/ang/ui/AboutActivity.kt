@@ -81,7 +81,7 @@ fun AboutScreen(onBackClick: () -> Unit) {
             SettingsMenuItem(
                 icon = painterResource(R.drawable.ic_source_code_24dp),
                 title = stringResource(R.string.title_source_code),
-                onClick = { Utils.openUri(context, AppConfig.APP_URL) }
+                onClick = { }
             )
             SettingsMenuItem(
                 icon = painterResource(R.drawable.license_24px),
@@ -91,17 +91,17 @@ fun AboutScreen(onBackClick: () -> Unit) {
             SettingsMenuItem(
                 icon = painterResource(R.drawable.ic_feedback_24dp),
                 title = stringResource(R.string.title_pref_feedback),
-                onClick = { Utils.openUri(context, AppConfig.APP_ISSUES_URL) }
+                onClick = { }
             )
             SettingsMenuItem(
                 icon = painterResource(R.drawable.ic_telegram_24dp),
                 title = stringResource(R.string.title_tg_channel),
-                onClick = { Utils.openUri(context, AppConfig.TG_CHANNEL_URL) }
+                onClick = { }
             )
             SettingsMenuItem(
                 icon = painterResource(R.drawable.ic_privacy_24dp),
                 title = stringResource(R.string.title_privacy_policy),
-                onClick = { Utils.openUri(context, AppConfig.APP_PRIVACY_POLICY) }
+                onClick = { }
             )
             VersionInfoBlock(
                 versionText = versionText,

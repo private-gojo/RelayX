@@ -59,7 +59,7 @@ class SettingsActivity : BaseComponentActivity() {
         SettingsScreen(
             viewModel = viewModel,
             onBackClick = { finish() },
-            onModeHelpClicked = { Utils.openUri(this, AppConfig.APP_WIKI_MODE) }
+            onModeHelpClicked = { }
         )
     }
 }
