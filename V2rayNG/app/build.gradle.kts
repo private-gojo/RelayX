@@ -13,8 +13,8 @@ android {
         applicationId = "dev.relayx.core"
         minSdk = 24
         targetSdk = 37
-        versionCode = 744
-        versionName = "2.3.4"
+        versionCode = 748
+        versionName = "2.3.8"
 
         val abiFilterList = (properties["ABI_FILTERS"] as? String)?.split(';')
         splits {

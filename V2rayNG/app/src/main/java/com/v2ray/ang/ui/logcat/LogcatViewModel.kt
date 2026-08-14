@@ -20,6 +20,7 @@ import java.io.IOException
 class LogcatViewModel(application: Application) : BaseViewModel(application) {
     private val logsetsAll: MutableList<String> = mutableListOf()
     private var currentFilter: String = ""
+    private var currentLevelFilter: Char? = null
 
     private val _filteredLogs = MutableStateFlow<List<String>>(emptyList())
     val filteredLogs: StateFlow<List<String>> = _filteredLogs.asStateFlow()
@@ -67,16 +68,27 @@ class LogcatViewModel(application: Application) : BaseViewModel(application) {
         }
     }
 
+    fun filterByLevel(level: Char?) {
+        currentLevelFilter = level
+        applyFilter()
+    }
+
     fun filter(content: String?) {
         currentFilter = content?.trim() ?: ""
         applyFilter()
     }
 
     private fun applyFilter() {
-        _filteredLogs.value = if (currentFilter.isEmpty()) {
-            logsetsAll.toList()
-        } else {
-            logsetsAll.filter { it.contains(currentFilter) }
+        var result: List<String> = logsetsAll
+        if (currentLevelFilter != null) {
+            result = result.filter { line ->
+                val slashIndex = line.indexOf('/')
+                slashIndex > 0 && line[slashIndex - 1] == currentLevelFilter
+            }
         }
+        if (currentFilter.isNotEmpty()) {
+            result = result.filter { it.contains(currentFilter) }
+        }
+        _filteredLogs.value = result
     }
 }

@@ -515,7 +515,7 @@
     <string name="acc_add">Add configuration</string>
     <string name="acc_more">More options</string>
     <string name="acc_share_subscription">Share subscription link</string>
-    <string name="acc_share_log">Share log</string>
+    <string name="acc_filter_log">Filter logs</string>
     <string name="acc_remove">Remove proxy chain member</string>
     <string name="acc_add_member">Add proxy chain member</string>
     <string name="acc_start_scanner">Start QR scanner</string>

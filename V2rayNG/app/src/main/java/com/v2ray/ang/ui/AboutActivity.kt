@@ -218,10 +218,6 @@ fun AboutScreen(onBackClick: () -> Unit) {
                 )
             )
 
-            VersionInfoBlock(
-                versionText = versionText,
-                appIdText = appIdText
-            )
         }
 
         if (showOssDialog) {

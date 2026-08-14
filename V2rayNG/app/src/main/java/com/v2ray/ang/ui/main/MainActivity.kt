@@ -20,6 +20,7 @@ import dev.relayx.core.AngApplication
 import dev.relayx.core.AppConfig
 import dev.relayx.core.R
 import dev.relayx.core.core.LauncherManager
+import dev.relayx.core.core.CoreNativeManager
 import dev.relayx.core.dto.entities.ProfileItem
 import dev.relayx.core.enums.EConfigType
 import dev.relayx.core.enums.PermissionType
@@ -106,8 +107,13 @@ class MainActivity : HelperBaseComponentActivity() {
     @Composable
     override fun ScreenContent() {
         BackHandler { moveTaskToBack(false) }
+        val libVersion = CoreNativeManager.getLibVersion()
+        val versionText = "v${BuildConfig.VERSION_NAME} ($libVersion)"
+        val appIdText = BuildConfig.APPLICATION_ID
         MainScreen(
             mainViewModel = mainViewModel,
+        versionText = versionText,
+        appIdText = appIdText,
             onAction = { action ->
                 when (action) {
                     MainAction.ToggleService -> handleFabAction()

@@ -66,7 +66,7 @@ private val drawerItems = primaryDrawerItems + listOf(
 )
 
 @Composable
-fun MainDrawerContent(drawerState: DrawerState, onNavigate: (MainDestination) -> Unit) {
+fun MainDrawerContent(drawerState: DrawerState, versionText: String, appIdText: String? = null, onNavigate: (MainDestination) -> Unit) {
     val drawerScrollState = rememberScrollState()
 
     ModalDrawerSheet(
@@ -93,10 +93,20 @@ fun MainDrawerContent(drawerState: DrawerState, onNavigate: (MainDestination) ->
                         text = stringResource(R.string.app_name),
                         style = MaterialTheme.typography.headlineLarge.copy(
                             fontFamily = FontFamily(Font(R.font.montserrat_thin)),
-                            fontWeight = FontWeight.Thin
+                            fontWeight = FontWeight.Bold
                         ),
                         textAlign = TextAlign.Center
                     )
+                Text(
+                    text = versionText,
+                    style = MaterialTheme.typography.bodySmall
+                )
+                if (appIdText != null) {
+                    Text(
+                        text = appIdText,
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                }
                 }
             }
             drawerItems.forEachIndexed { index, item ->

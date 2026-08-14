@@ -175,12 +175,6 @@ fun LogcatScreen(
                             contentDescription = stringResource(R.string.acc_copy_log)
                         )
                     }
-                    IconButton(onClick = { onShareLogcat() }) {
-                        Icon(
-                            painterResource(R.drawable.ic_share_24dp),
-                            contentDescription = stringResource(R.string.acc_share_log)
-                        )
-                    }
                     IconButton(onClick = {
                         scope.launch(Dispatchers.IO) { viewModel.clearLogcat() }
                     }) {

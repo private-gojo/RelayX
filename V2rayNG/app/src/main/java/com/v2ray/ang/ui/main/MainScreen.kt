@@ -43,6 +43,8 @@ import kotlinx.coroutines.launch
 @Composable
 fun MainScreen(
     mainViewModel: MainViewModel,
+    versionText: String,
+    appIdText: String? = null,
     onAction: (MainAction) -> Unit,
     onNavigate: (MainDestination) -> Unit,
 ) {
@@ -196,6 +198,8 @@ fun MainScreen(
         drawerContent = {
             MainDrawerContent(
                 drawerState = drawerState,
+                versionText = versionText,
+                appIdText = appIdText,
                 onNavigate = { route ->
                     scope.launch { drawerState.close() }
                     onNavigate(route)

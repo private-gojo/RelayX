@@ -515,7 +515,6 @@
     <string name="acc_add">添加配置</string>
     <string name="acc_more">更多选项</string>
     <string name="acc_share_subscription">分享订阅链接</string>
-    <string name="acc_share_log">分享日志</string>
     <string name="acc_remove">移除代理链成员</string>
     <string name="acc_add_member">添加代理链成员</string>
     <string name="acc_start_scanner">启动二维码扫描器</string>
