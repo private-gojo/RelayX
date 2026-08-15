@@ -208,7 +208,7 @@ fun LogcatScreen(
                     .fillMaxSize()
                     .verticalScrollbar(listState)
             ) {
-                itemsIndexed(items = logs, key = { index, _ -> index }) { _, log ->
+                itemsIndexed(items = logs, key = { _, log -> log }) { _, log ->
                     LogcatItem(log = log, onLongClick = { Utils.setClipboard(context, log) })
                     ItemDivider()
                 }
