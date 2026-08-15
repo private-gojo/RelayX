@@ -41,7 +41,7 @@ class LogcatViewModel(application: Application) : BaseViewModel(application) {
                 logsetsAll.clear()
                 logsetsAll.addAll(allText)
                 applyFilter()
-            } catch (e: IOException) {
+            } catch (e: Exception) {
                 LogUtil.e(AppConfig.TAG, "Failed to get logcat", e)
             }
         }
@@ -63,7 +63,7 @@ class LogcatViewModel(application: Application) : BaseViewModel(application) {
 
             logsetsAll.clear()
             _filteredLogs.value = emptyList()
-        } catch (e: IOException) {
+        } catch (e: Exception) {
             LogUtil.e(AppConfig.TAG, "Failed to clear logcat", e)
         }
     }
