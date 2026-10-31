@@ -6,6 +6,10 @@ on:
       release_tag:
         required: false
         type: string
+      prerelease:
+        required: false
+        type: boolean
+        default: false
   push:
     branches:
       - master
@@ -23,6 +27,16 @@ jobs:
       with:
         submodules: 'recursive'
         fetch-depth: '0'
+
+    - name: Check release tag
+      if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
+      env:
+        TAG: ${{ inputs.release_tag }}
+      run: |
+        VN=$(grep -oP 'versionName = "\K[^"]+' V2rayNG/app/build.gradle.kts | head -1)
+        echo "tag=$TAG versionName=$VN"
+        echo "$TAG" | grep -Eq '^v?[0-9]+(\.[0-9]+)*$' || { echo "::error::tag must be numeric like v$VN"; exit 1; }
+        [ "${TAG#v}" = "$VN" ] || { echo "::error::tag $TAG does not match versionName $VN"; exit 1; }
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v4
@@ -96,35 +110,42 @@ jobs:
         echo "sdk.dir=${ANDROID_HOME}" > local.properties
         chmod 755 gradlew
         ./gradlew licenseFdroidReleaseReport
-        ./gradlew assembleRelease -Pandroid.injected.signing.store.file=${{ steps.android_keystore.outputs.filePath }} -Pandroid.injected.signing.store.password=${{ secrets.APP_KEYSTORE_PASSWORD }} -Pandroid.injected.signing.key.alias=${{ secrets.APP_KEYSTORE_ALIAS }} -Pandroid.injected.signing.key.password=${{ secrets.APP_KEY_PASSWORD }}
+        ./gradlew assemblePlaystoreRelease -Pandroid.injected.signing.store.file=${{ steps.android_keystore.outputs.filePath }} -Pandroid.injected.signing.store.password=${{ secrets.APP_KEYSTORE_PASSWORD }} -Pandroid.injected.signing.key.alias=${{ secrets.APP_KEYSTORE_ALIAS }} -Pandroid.injected.signing.key.password=${{ secrets.APP_KEY_PASSWORD }}
     
     - name: Upload arm64-v8a APK
       uses: actions/upload-artifact@v7
-      if: ${{  success() }}
       with:
         name: arm64-v8a
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/*/release/*arm64-v8a*.apk
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/playstore/release/*_arm64-v8a.apk
+        if-no-files-found: error
 
     - name: Upload armeabi-v7a APK
       uses: actions/upload-artifact@v7
-      if: ${{  success() }}
       with:
         name: armeabi-v7a
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/*/release/*armeabi-v7a*.apk
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/playstore/release/*_armeabi-v7a.apk
+        if-no-files-found: error
 
     - name: Upload x86 APK
       uses: actions/upload-artifact@v7
-      if: ${{  success() }}
       with:
         name: x86-apk
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/*/release/*x86*.apk
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/playstore/release/*_x86.apk
+        if-no-files-found: error
+
+    - name: Upload x86_64 APK
+      uses: actions/upload-artifact@v7
+      with:
+        name: x86_64-apk
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/playstore/release/*_x86_64.apk
+        if-no-files-found: error
 
     - name: Upload universal APK
       uses: actions/upload-artifact@v7
-      if: ${{ success() }}
       with:
         name: universal-apk
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/*/release/*universal*.apk
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/playstore/release/*_universal.apk
+        if-no-files-found: error
 
   sign-and-release:
     needs: build
@@ -137,23 +158,17 @@ jobs:
         with:
           path: release
 
-      - name: Sign APK files
+      - name: Collect APKs
         run: |
-          printf '%s' "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
-          KEY=$(gpg --list-secret-keys --with-colons | awk -F: '/^fpr:/ {print $10; exit}')
           mkdir -p release-files
+          find release -type f -name '*.apk' -exec cp {} release-files/ \;
+          ls -l release-files
+          [ "$(ls release-files/*.apk | wc -l)" -eq 5 ] || { echo "::error::expected 5 APKs"; exit 1; }
 
-          find release -type f -name '*.apk' | while read apk; do
-            cp "$apk" release-files/
-            gpg --batch --yes --local-user "$KEY" --detach-sign --output "release-files/$(basename "$apk").sig" "$apk"
-          done
-
-          gpg --armor --export "$KEY" > release-files/v2rayN-public-key.asc
-
-      - name: Upload APKs, signatures and public key to release
+      - name: Upload APKs to release
         uses: svenstaro/upload-release-action@v2
         with:
           file: release-files/*
           tag: ${{ inputs.release_tag }}
           file_glob: true
-          prerelease: true
+          prerelease: ${{ inputs.prerelease }}
