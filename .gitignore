@@ -72,3 +72,5 @@ Thumbs.db
 *.keystore
 *.idsig
 relayx-*.apk
+*.base64
+*.b64
