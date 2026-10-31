@@ -68,3 +68,7 @@ V2rayNG/app/google-services.json
 Thumbs.db
 .DS_Store
 /libs/
+*.jks
+*.keystore
+*.idsig
+relayx-*.apk
